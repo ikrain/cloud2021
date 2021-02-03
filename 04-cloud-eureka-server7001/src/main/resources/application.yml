@@ -1,0 +1,32 @@
+# 单机版配置：
+#server:
+#  port: 7001
+#
+#eureka:
+#  instance:
+#    hostname: localhost
+#  client:
+#    # false表示不向注册中心注册自己
+#    register-with-eureka: false
+#    # false表示自己就是注册中心，不需要去检索服务
+#    fetch-registry: false
+#    service-url:
+#      # 设置服务查询地址
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#
+
+# 集群版配置：
+server:
+  port: 7001
+
+eureka:
+  instance:
+    hostname: eureka7001.com
+  client:
+    # false表示不向注册中心注册自己
+    register-with-eureka: false
+    # false表示自己就是注册中心，不需要去检索服务
+    fetch-registry: false
+    service-url:
+      # 设置服务查询地址
+      defaultZone: http://eureka7002.com:7002/eureka/
