@@ -20,6 +20,7 @@
       <module>07-cloud-provider-payment8004</module>
       <module>08-cloud-providerzk-order80</module>
       <module>09-cloud-providerconsul-payment8006</module>
+    <module>10-cloud-consumerconsul-order80</module>
   </modules>
 
   <!--统一管理jar包版本-->

@@ -2,13 +2,14 @@ package cn.krain.springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * @author CC
  * @data 2021/2/3 - 17:11
  */
-@SpringBootApplication
+@SpringBootApplication(exclude =  {DataSourceAutoConfiguration.class})
 @EnableDiscoveryClient
 public class PaymentMain8006 {
     public static void main(String[] args) {
