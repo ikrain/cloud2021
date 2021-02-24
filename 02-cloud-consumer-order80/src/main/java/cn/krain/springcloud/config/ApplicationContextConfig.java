@@ -16,7 +16,7 @@ public class ApplicationContextConfig {
     *   等同于application.xml文件中的<bean id="" class="">
     * */
     @Bean
-    @LoadBalanced       // 该注解用于赋予RestTemplate负载均衡的能力
+    @LoadBalanced       // 该注解用于赋予RestTemplate负载均衡的能力，同时eureka已经集成了ribbon，无需再次在pom文件中引入
     public RestTemplate getRestTemplate(){
         return new RestTemplate();
     }
