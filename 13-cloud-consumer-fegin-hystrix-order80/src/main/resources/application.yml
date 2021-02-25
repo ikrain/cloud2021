@@ -1,0 +1,34 @@
+server:
+  port: 80
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+
+feign:
+  hystrix:
+    enabled: true
+
+# 应对BUG：Request processing failed; nested exception is feign.RetryableException: Read timed out executing GET而添加
+
+hystrix:
+  command:
+  default:
+  execution:
+  isolation:
+  thread:
+  timeoutInMilliseconds: 6000
+
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+
+spring:
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true
+
+
