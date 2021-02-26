@@ -37,4 +37,11 @@ public class PaymentController {
         return result;
     }
 
+    @GetMapping("/payment/circuit/{id}")
+    public String paymentCircuitBreaker(@PathVariable("id") Integer id){
+        String result = paymentService.paymentCircuitBreaker(id);
+        log.info("*****result: "+result);
+        return result;
+    }
+
 }
